@@ -46,11 +46,13 @@ function init() {
     Cubo = [];   // Definir un array unidimensional
     Delta=5;
     Dim=10;
+   
     
     Cubo.push(cubo(Dim, Dim, Dim, 0x6DEA0F, 'Lambert', false));
     Cubo[0].translateX(Delta);
     Cubo[0].translateY(Delta); 
     Cubo[0].translateZ(Delta);
+    
     // el primer cubo se translada a las coordenadas (5,5,5)
    
     Cubo.push(cubo(Dim, Dim, Dim, 0x0FEAEA, 'Lambert', false));
