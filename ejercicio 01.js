@@ -47,10 +47,11 @@ function init()
     Cubo = [];   // Define un array unidimensional para contener los cubos
 
    
-    Dim=15; //Valor la inicial del cubo
+    Dim=16; //Valor la inicial del cubo
     Delta= Dim/2;//Valor el lado inicial del cubo dividido en 2
-    Diagonal=Math.sqrt(Math.pow(Delta,2)+Math.pow (Delta,2));
-    NewDelta=Diagonal-Delta;
+    Diagonal=Math.sqrt((Delta*Delta)+(Delta*Delta));
+    Resta=(Diagonal-Delta);
+    NewDelta=Resta+Delta;
     Angulo=Math.PI/4;
 
     Cubo.push(cubo(Dim, Dim, Dim, 0x6DEA0F, 'Lambert', false));//Cubo 1
@@ -61,7 +62,7 @@ function init()
     for(i=0;i<3;i++)// Trasladra los cubos al valor inicial de Delta
     {
          Cubo[i].translateX(NewDelta); //Se traslada en x
-         Cubo[i].translateY(NewDelta); //Se traslada en y
+         Cubo[i].translateY(Delta); //Se traslada en y
          Cubo[i].translateZ(NewDelta); //Se traslada en z
     } 
     
